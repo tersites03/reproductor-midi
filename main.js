@@ -20,7 +20,7 @@ for (let contador = 0; contador < listaDeTeclas.length; contador++) {
       tecla.classList.add("activa");
     }
     console.log(evento.code === "Space" || evento.code === "Enter");
-    
+
     tecla.onkeyup = function () {
       tecla.classList.remove("activa");
     };
