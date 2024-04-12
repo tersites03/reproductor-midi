@@ -1,9 +1,19 @@
-function playSonidoPom(){
-    document.querySelector('#sonido_tecla_pom').play();
+function playSonido(idElementoAudio){
+    document.querySelector(idElementoAudio).play();
 }
+//document.querySelectorAll('') nos devuelve un array o lista de todos los elementos que coincidan con el selector.
 
-document.querySelector('.tecla_pom').onclick = playSonidoPom;
+const listaDeTeclas = document.querySelectorAll('.tecla');
 
+let contador = 0
+
+// cararcteristicas del ciclo while(condiciones) {bloque} 
+
+while(contador < 9){
+    listaDeTeclas[contador].onclick = playSonido;
+    contador = contador + 1
+    console.log('vuelta ' + contador);
+}
 
 
 
