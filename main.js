@@ -9,10 +9,20 @@ let contador = 0
 
 // cararcteristicas del ciclo while(condiciones) {bloque} 
 
-while(contador < 9){
-    listaDeTeclas[contador].onclick = playSonido;
+while(contador < 9){    
+    
+    const tecla = listaDeTeclas[contador];
+    const instrumento = tecla.classList[1];
+    //console.log(instrumento);
+
+    const idAudio = `#sonido_${instrumento}`
+    console.log(idAudio);
+
+    tecla.onclick = function(){
+        playSonido(idAudio);
+    } ;
     contador = contador + 1
-    console.log('vuelta ' + contador);
+    
 }
 
 
